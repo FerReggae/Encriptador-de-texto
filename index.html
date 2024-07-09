@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="style.css"><!-- footer>Hace la llamada a nuestro archivo .css</footer -->
+</head>
+    <body>
+        <div class="container"><!-- footer>div el cuadro de texto que usaremos</footer -->
+            <div class="encriptar"><!-- footer>div cuadro de texto donde escribiremos el texto</footer -->
+                <textarea 
+                name="texto" 
+                class="texto" 
+                id="texto" 
+                cols="30" 
+                rows="10" 
+                placeholder="Ingresa el texto aqui"><!-- footer>placeholder aparece cuando no hemos escrito ningun texto</footer -->
+                </textarea>
+            
+                <div class="terminos">
+                    <p>Solo letras minúsculas y sin acentos</p>
+                </div>
+                <div class="botones">
+                    <button class="btn-encriptar" 
+                        type="button" 
+                        onclick="encriptar()">
+                        Encriptar
+                    </button>
+                    <input 
+                    type="button" 
+                    class="btn-desencriptar" 
+                    value="Desencriptar" 
+                    onclick="desencriptar()"
+                    />
+                    <!-- footer><button class="btn-desencriptar" type="button" onclick="desencriptar()">
+                    Desencriptar
+                    </button>-->
+                </div>
+         </div>
+         <div class="encriptado">
+            <img src="" alt="" id="muñeco">
+            <div class="mensaje-encriptado" id="mensaje-encriptado">
+                <h2 id="titulo-mensaje">Ningun mensaje encontrado</h2>
+                <p>Ingresa el texto que deceas encriptar o desencriptar</p>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="mensaje"></textarea>
+            </div>
+         </div>
+        </div>
+        <footer class="footer"> <!-- <footer>es como el pie de pagina</footer> -->
+                <p>Desarrollado por Fernando Ortíz</p>
+        </footer>
+    </body>
+<script src="index.js"></script>
+</html>
