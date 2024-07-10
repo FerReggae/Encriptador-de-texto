@@ -51,3 +51,10 @@ function desencriptar() {
             parrafo.textContent = "Ingresa el texto que deceas encriptar o desencriptar";
         }
 }
+
+function copiar() {
+    let texto = document.getElementById("texto").value;
+    document.getElementById("texto").disabled = false;
+    texto.select();
+    
+}

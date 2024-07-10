@@ -1,13 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+
+:root {
+    /* Alta de colores mas usados en los estilos*/
+    --color-primaria: #F3F5FC;
+    --color-secundaria: #0f0808;
+    --color-terciaria: #0A3871;
+    --color-cuarta: #D8DFE8;
+    --color-quinta: #ffffff;
+    --color-sexto: #f3f5f0;
+    --color-septimo: #495057;
+    --color-octavo: #343a40;
+
+    --fuente-krona: 'Krona One', sans-serif;
+    --fuente-montserrat: 'Montserrat', sans-serif;
+}
+
 *{ /*cambiaremos algo de manera universal*/
     margin: 0;
     padding: 0;
+}
+
+.footer {/*estilo footer*/
+    color:var(--color-terciaria);
+    background-color: var(--color-cuarta);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fuente-krona);
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 
 .container {
     position: relative;
     width: 100vw;
     height: 100vh;
-    background: #f3f5f0;
+    background: var(--color-sexto);
 }
 
 .texto {
@@ -17,16 +45,16 @@
     left: 12%;
     top: 15%;
     border: none;
-    font-family: "Inter";
+    font-family: var(--fuente-montserrat);
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
     line-height: 150%;
-    background-color: #f3f5fc;
+    background-color: var(--color-primaria);
 }
 
 .texto::placeholder {
-    color: #0a3871;
+    color: var(--color-terciaria);
 }
 
 .texto:focus,
@@ -48,12 +76,12 @@
 }
 
 .terminos p {
-    font-family: "Inter";
+    font-family: var(--fuente-krona);
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 150%;
-    color: #495057;
+    color: var(--color-septimo);
     opacity: 0.8;
     flex: none;
     order: 1;
@@ -77,13 +105,13 @@
     padding: 2%;
     gap: 8px;
     width: 25%;
-    background-color: #0a3871;
+    background-color: var(--color-terciaria);
     border-radius: 24px;
-    font-family: "Inter";
+    font-family: var(--fuente-montserrat);
     font-size: 18px;
     line-height: 19px;
     text-align: center;
-    color: #fff;
+    color: var(--color-quinta);
 }
 
 .btn-desencriptar {
@@ -95,15 +123,15 @@
     padding: 2%;
     gap: 8%;
     width: 25%;
-    background: #d8dfe8;
-    border: 1px solid #0a3871;
+    background: var(--color-cuarta);
+    border: 1px solid var(--color-terciaria);
     border-radius: 24px;
-    font-family: "Inter";
+    font-family: var(--fuente-montserrat);
     font-weight: 400;
     font-size: 18px;
     line-height: 19px;
     text-align: center;
-    color: #0a3871;
+    color: var(--color-terciaria);
 }
 
 .btn-copiar {
@@ -115,15 +143,15 @@
     padding: 2%;
     gap: 8%;
     width: 25%;
-    background: #d8dfe8;
-    border: 1px solid #0a3871;
+    background: var(--color-cuarta);
+    border: 1px solid var(--color-terciaria);
     border-radius: 24px;
-    font-family: "Inter";
+    font-family: var(--fuente-montserrat);
     font-weight: 400;
     font-size: 18px;
     line-height: 19px;
     text-align: center;
-    color: #0a3871;
+    color: var(--color-terciaria);
     right: 90%;
 }
 
@@ -143,7 +171,7 @@
     height: 75%; /*alto*/
     left: 60%;   /*izquierda*/
     top: 5%;     /*abajo*/
-    background: #fff;
+    background: var(--color-quinta);
     box-shadow: 0px 24px 32px -8px rgb(0, 0, 0, 0.08);
     border-radius: 32px;
 }
@@ -163,24 +191,24 @@
 
 .mensaje-encriptado h2 {
     width: 60%;
-    font-family: "Inter";
+    font-family: var(--fuente-montserrat);
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 120%;
     text-align: center;
-    color: #343a40;
+    color: var(--color-octavo);
 }
 
 .mensaje-encriptado p {   /*(accedemos al padre) ".mensaje-encriptado" (accedemso al hijo) "p" */
     width: 80%;
-    font-family: "Inter";
+    font-family: var(--fuente-montserrat);
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
     text-align: center;
-    color: #343a40;
+    color: var(--color-octavo);
 }
 
 .encriptado img {
@@ -192,6 +220,11 @@
 
 /*responsive desing*/
 @media (max-width: 57.5em) {
+
+    .header{
+        padding: 10%;  
+    }
+
     .container{
         display: flex;
         flex-direction: row;
