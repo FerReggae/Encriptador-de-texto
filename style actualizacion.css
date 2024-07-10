@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root{  /*declarando variables de raiz*/
+    --color-primario:#000000;
+    --color-secundario: #6196A6;
+    --color-terciario: #A4CE95;
+    --color-hover: #272727;
+    --color-cuarto: #0000FF;
+
+    --fuente-monserrat: "Montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
+}
+* {  /* el asterisco dice que se cambia todo el formato*/
+    padding: 0; /*distancia entre el contenido y el borde/crea el espacio o área alrededor del contenido de un elemento*/
+    margin: 0; /*margen*/
+}
+
+/*p {
+    margin: 10px;
+    border: 2px solid black;  //encerro en el cuadro el texto del parrafo//
+    padding: 5px;
+ }*/
+
+body {
+    background-color: var(--color-primario); /*color de fondo*/
+    color: var(--color-secundario); /*color letras*/
+    /*height: 100vh; /*significa vew port y la h es higt de tamaño/tamño de la panatalla a utilizar*/
+    box-sizing: border-box;
+}
+
+/*strong {
+    color: aqua;
+}*/
+
+.header{
+    padding: 2% 0% 0% 15%; /*espacio arriba,derecha, abajo e izquierda*/
+}
+
+.header_menu{
+    display: flex;
+    gap: 80PX;
+}
+
+.header_menu_link{
+    font-family: var(--fuente-monserrat);
+    font-size: 1.5rem; /*1.5rem =24px/1rem = 16/ 1/24=1.5*/
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
+.presentacion{
+    display: flex;
+    align-items: center;
+    padding: 6% 15%;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.presentacion__contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /*tamaño de los espacios entre filas y columnas*/
+}
+
+.presentacion_contenido_titulo{
+    font-size: 2.25rem; /*36px = 2.25rem*/
+    font-family: var(--fuente-krona);
+}
+
+.titulo-destaque{   /*con el punto al inicio lo mandamos a llamar del index*/
+    color: var(--color-terciario);
+}
+
+.presentacion_contenido_texto{
+    font-size: 1.5rem;
+    font-family: var(--fuente-monserrat);
+}
+
+.presentacion_enlaces{
+    display: flex; /*flex es un contenedor o caja de contenido/coloca los cuadros uno junto al otro*/
+    justify-content: space-between;
+    flex-direction: column; /*con COLUMN se cambio el eje a horizontal, sin el es vertical*/
+    align-items: center; /*para alinear los items*/
+    gap: 32px; /*espacio entre botones/separacion*/
+}
+
+.presentacion_enlaces_subtitulo{
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    width: 400;
+}
+
+.presentacion_enlaces_link{
+    width: 50%; /*tamaño de fuente*/
+    /*background-color: #22D4FD; /*color de fuente*/
+    text-align: center;  /*centrar */
+    padding: 21.5px 0; /*el primer valor es el vertical, el segundo es horazontal*/
+    border-radius: 8px; /*para redondear el boton*/
+    font-family: var(--fuente-monserrat); /*tipo de letra*/
+    font-size: 1.5rem; /*tamaño de la letra*/
+    font-weight: 600; /*anchura de la letra*/
+    text-decoration: none; /*decoracion de texto*/
+    color: var(--color-secundario); /*color de letra*/
+    border: 2px solid var(--color-terciario); /*BORDER borde o contorno de boton/SOLID estilo de borde*/
+    display: flex; /*alineo los textos a la izquierda*/
+    justify-content: center; /*centrara los textos*/
+    gap: 10px; /*separa los iconos de las aplicaciones de sus nombres*/
+}
+
+.presentacion_enlaces_link:hover{ /*HOVER sirve para seleccionar elemento al pasar el puntero sobre ellos*/
+    background-color: var(--color-hover);
+    /*border: 2px solid var(--color-cuarto); /*Esto añadirá un borde azul alrededor del botón cuando el mouse esté sobre él*/
+}
+
+.presentacion_imagen{
+    width: 50%;
+}
+
+.footer{
+    background-color: var(--color-terciario);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-monserrat);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1200px ) {  /*seleciona el tamaño del contenido de la pagina, en este caso 120px*/
+
+    .header{
+        padding: 10%;
+    }
+
+    .header_menu{
+        justify-content: center;
+    }
+
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .presentacion__contenido{
+        width: auto; /*AUTO va a adaptarse en automatico, si es el 100% se va a adaptar al tamaña de la pantalla*/
+    }
+}

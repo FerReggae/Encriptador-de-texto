@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador</title>
-    <link rel="stylesheet" href="style.css"><!-- footer>Hace la llamada a nuestro archivo .css</footer -->
+    <link rel="stylesheet" href="style.css"> <!-- Hace la llamada a nuestro archivo .css -->
 </head>
     <body>
-        <div class="container"><!-- footer>div el cuadro de texto que usaremos</footer -->
-            <div class="encriptar"><!-- footer>div cuadro de texto donde escribiremos el texto</footer -->
+        <div class="container"> <!-- div el cuadro de texto que usaremos< -->
+            <div class="encriptar"> <!-- div cuadro de texto donde escribiremos el texto -->
                 <textarea 
                 name="texto" 
                 class="texto" 
                 id="texto" 
                 cols="30" 
                 rows="10" 
-                placeholder="Ingresa el texto aqui"><!-- footer>placeholder aparece cuando no hemos escrito ningun texto</footer -->
-                </textarea>
+                placeholder="Ingresa el texto aqui"
+                ></textarea> <!-- placeholder aparece cuando no hemos escrito ningun texto -->
             
                 <div class="terminos">
                     <p>Solo letras minúsculas y sin acentos</p>
@@ -33,21 +33,27 @@
                     value="Desencriptar" 
                     onclick="desencriptar()"
                     />
-                    <!-- footer><button class="btn-desencriptar" type="button" onclick="desencriptar()">
+                    <input 
+                    type="button" 
+                    class="btn-copiar" 
+                    value="Copiar" 
+                    onclick="copiar()"
+                    />
+                    <!--<button class="btn-desencriptar" type="button" onclick="desencriptar()">
                     Desencriptar
                     </button>-->
                 </div>
          </div>
          <div class="encriptado">
-            <img src="" alt="" id="muñeco">
+            <img src="Imagenes/Munieco.png" alt="" id="muñeco">
             <div class="mensaje-encriptado" id="mensaje-encriptado">
-                <h2 id="titulo-mensaje">Ningun mensaje encontrado</h2>
+                <h2 id="titulo-mensaje">Ningun mensaje fue encontrado</h2>
                 <p>Ingresa el texto que deceas encriptar o desencriptar</p>
-                <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="mensaje"></textarea>
+                <!-- <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="mensaje"></textarea> -->
             </div>
          </div>
         </div>
-        <footer class="footer"> <!-- <footer>es como el pie de pagina</footer> -->
+        <footer class="footer"> <!-- footer es como el pie de pagina -->
                 <p>Desarrollado por Fernando Ortíz</p>
         </footer>
     </body>
